@@ -483,4 +483,5 @@ RD /S /Q %temp%
 MKDIR %temp%
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('A otimização foi finalizada com sucesso! Aproveite o seu computador com mais FPS e uma das menores latencias possíveis!', 'MathOptimizer', 'Ok', [System.Windows.Forms.MessageBoxIcon]::Information);}"
 shutdown -r -t 10
-pause >nul
+timeout -t 5 /nobreak >nul
+del "%~f0"
