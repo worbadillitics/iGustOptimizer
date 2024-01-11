@@ -5,7 +5,7 @@ set "interfgraf= echo. && echo                        ██╗  █████
 mode con: cols=100 lines=30
 cls
 if not "%1"=="am_admin" (
-    powershell start -verb runas '%0' am_admin 2>nul
+    powershell start -verb runas '%0' am_admin 2>$null
     exit /b
 )
 cls
