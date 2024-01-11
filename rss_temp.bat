@@ -4,7 +4,10 @@ chcp 65001
 set "interfgraf= echo. && echo                        ██╗  ██████╗    ██╗   ██╗   ███████╗ ████████╗ && echo                        ██║ ██╔════╝    ██║   ██║   ██╔════╝ ╚══██╔══╝ && echo                        ██║ ██║  ███╗   ██║   ██║   ███████╗    ██║ && echo                        ██║ ██║   ██║   ██║   ██║   ╚════██║    ██║ && echo                        ██║ ╚██████╔╝   ██████╔╝    ███████║    ██║ && echo.                      [Info] Made by worbadillitics for iGust comunnity"
 mode con: cols=100 lines=30
 cls
-if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b) 2>nul
+if not "%1"=="am_admin" (
+    powershell start -verb runas '%0' am_admin 2>nul
+    exit /b
+)
 cls
 echo Rodando em : %0
 echo Aguarde até o programa executar...
